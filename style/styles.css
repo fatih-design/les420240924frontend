@@ -1,23 +1,313 @@
-/*
-Table of contents
- */
-/*1. Global styles*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: rgb(75, 73, 232);
+    background: linear-gradient(90deg, rgba(75, 73, 232, 1) 0%, rgba(87, 34, 205, 1) 100%);
+    position: relative;
 
 
-/*2.Typography*/
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-basis: 100vw;
 
 
-/*3.layout*/
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav ul li {
+    margin: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.intro {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0 150px 0;
+
+}
+
+.intro h1, h3 {
+    padding-bottom: 20px;
+    width: 40vw;
+    text-align: center;
+    color: #F2F0FF;
+}
+
+header button[type="submit"] {
+    background-color: #ED4385;
+    padding: 20px 60px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-radius: 30px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.vertical-line {
+    height: 100px;
+    width: 100px;
+    background-image: url("assets/squiggle_line_stripe.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+main {
 
 
+}
 
-/*3.1 reusables*/
+.core-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0
+}
+
+.core-message h2 {
+    color: #4B49E8;
+    width: 50vw;
+    padding-top: 50px;
+}
+
+.core-message p {
+    padding: 60px 0;
+}
+
+#case-studies {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F3F6F9;
+    padding: 60px 0;
+}
+
+.even-case-study {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    position: relative;
+
+}
+
+.odd-case-study {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    position: relative;
+
+}
+
+.even-case-study h2, .odd-case-study h2 {
+    padding: 25px 50px;
+    color: #0C0C0C;
+}
+
+.even-case-study .icon {
+    position: absolute;
+    background-image: url("assets/squiggle_line.svg");
+    width: 100px;
+    height: 6px;
+    background-size: auto;
+    background-repeat: no-repeat;
+    left: 50px;
+}
+
+.odd-case-study .icon {
+    position: absolute;
+    background-image: url("assets/squiggle_line.svg");
+    width: 100px;
+    height: 6px;
+    background-size: auto;
+    background-repeat: no-repeat;
+    right: 390px;
+}
+
+.even-case-study p, .odd-case-study p {
+    padding: 25px 50px;
+}
+
+.image-wrapper {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.image-wrapper img {
+    width: 100%;
+    flex-shrink: 0;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 
 
-    /*3.2 other*/
+}
 
-/*4. areas*/
+#services {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 70px 0;
+}
 
-/*4.1 header*/
+.services {
+    display: flex;
+    flex-direction: row;
+    width: 70vw;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
 
-/*4.2 introduction*/
+.services article {
+    text-align: left;
+    flex-basis: 20vw;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 10px;
+}
+
+.services h2 {
+    padding: 10px;
+    color: #4B49E8;
+}
+
+.services p {
+    padding: 10px;
+
+}
+
+.services img {
+    width: 50px;
+    margin: 10px;
+}
+
+.contact {
+    background-color: #4B49E8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.contact h1 {
+    color: #F2F0FF;
+    padding: 10px;
+
+}
+
+.contact p {
+    padding: 10px;
+    color: #F2F0FF;
+}
+
+.contact form {
+    width: 100%;
+    max-width: 600px; /* Max-breedte van het formulier */
+    margin: 0 auto; /* Centraal uitlijnen */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column; /* Zet label en input onder elkaar */
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    margin-bottom: 5px; /* Ruimte tussen het label en het invoerveld */
+    font-weight: bold;
+    color: white;
+    font-size: 12px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+.contact button {
+    padding: 20px 60px;
+    font-size: 16px;
+    background-color: #ED4385;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 0 50%;
+    transform: translateX(-50%);
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    background-color: black;
+
+}
+
+footer p {
+    color: white;
+}
